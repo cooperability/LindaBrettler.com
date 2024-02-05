@@ -6,6 +6,8 @@ import styles from "../styles/utils.module.css";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import ActiveLink from "../components/activeLink";
+import Image from "next/image";
+
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -50,42 +52,15 @@ const Header = () => {
             <a className={styles.navLink}>| Home |</a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/demos">
-            <a className={styles.navLink}>| Demos |</a>
+            <a className={styles.navLink}>| Projects |</a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/skills">
-            <a className={styles.navLink}>| Skills |</a>
+            <a className={styles.navLink}>| About |</a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/devlog">
-            <a className={styles.navLink}>| Log |</a>
+            <a className={styles.navLink}>| Press |</a>
           </ActiveLink>
         </div>
-      );
-    }
-  }
-
-  const renderThemeChanger = () => {
-    if (!mounted) return null;
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <button
-          className="bg-slate-100 hover:bg-slate-300 text-black font-bold py-1 px-1 rounded flex"
-          onClick={() => setTheme("light")}
-        >
-          <SunIcon className="w-7 h-7 text-yellow-500 " role="button" />
-          Light
-        </button>
-      );
-    } else {
-      return (
-        <button
-          className="bg-slate-600 hover:bg-slate-800 text-white font-bold py-1 px-1 rounded flex"
-          onClick={() => setTheme("dark")}
-        >
-          <MoonIcon className="w-7 h-7 text-gray-900 " role="button" />
-          Dark
-        </button>
       );
     }
   };
@@ -101,7 +76,16 @@ const Header = () => {
         <nav className={styles.navbar} suppressHydrationWarning>
           {navigator()}
         </nav>
-        {renderThemeChanger()}
+        <Link href="https://www.imdb.com/name/nm5343773/">
+          <div className="hover:cursor-pointer flex:horizontal justify-center items-center">
+            <Image
+                src="/images/insta.png"
+                className={styles.socialsLink}
+                alt="Instagram"
+                width="50"
+                height="50" />
+          </div>
+        </Link>
       </div>
       <div className={styles.horizLine} />
     </div>

@@ -3,23 +3,21 @@ import Image from "next/image";
 import styles from "../styles/utils.module.css";
 import Link from "next/link";
 import bg from "../public/images/parkslope.jpg";
-import Providers from "./providers";
 import Header from "../sections/Header"
 import Footer from "../sections/Footer"
 
-const name = "Cooper Reed";
-export const siteTitle = "Co-Operability";
+const name = "Linda Brettler";
+export const siteTitle = "Linda Brettler | Architect";
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
-      <Providers>
         <Header />
         <Head>
           <link rel="icon" type="image/ico" href="/icon.ico" />
           <meta
             name="description"
-            content="Cooper's personal website on next.js"
+            content="Portfolio of Linda Brettler, Architect"
           />
           <meta
             property="og:image"
@@ -34,12 +32,11 @@ export default function Layout({ children, home }) {
         <main>{children}</main>
         {!home && (
           <div className={styles.backToHome}>
-            <Link href="/devlog">
+            <Link legacyBehavior href="/devlog">
               <a>← Back to Dev Log</a>
             </Link>
           </div>
         )}
-      </Providers>
       <Footer />
     </div>
   );

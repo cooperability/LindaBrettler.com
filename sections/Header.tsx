@@ -54,7 +54,7 @@ const Header = () => {
           <ActiveLink activeClassName="active" href="/devlog">
             <a className={styles.navLink}>| Projects |</a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/demos">
+          <ActiveLink activeClassName="active" href="/about">
             <a className={styles.navLink}>| About |</a>
           </ActiveLink>
           <ActiveLink activeClassName="active" href="/skills">
@@ -72,6 +72,7 @@ const Header = () => {
   return (
     <div suppressHydrationWarning>
       <div className={styles.Header} suppressHydrationWarning>
+        <p><b>Linda Brettler | Architect</b></p>
         <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
         <nav className={styles.navbar} suppressHydrationWarning>
           {navigator()}

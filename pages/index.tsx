@@ -15,7 +15,13 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={styles.headingMd}>
-        <p>Linda Brettler | Architect</p>
+        <Image
+          priority
+          src="/images/Landing.jpg"
+          height={2530}
+          width={1656}
+          alt={"Blair Mansion Living Room"}
+        />
       </section>
     </Layout>
   );

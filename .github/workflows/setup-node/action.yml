@@ -6,16 +6,19 @@ runs:
     - name: Setup Node.js ⚙️
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: '20'
+        cache: 'yarn'
 
     - name: Cache dependencies ⚡
       id: cache_dependencies
       uses: actions/cache@v3
       with:
         path: node_modules
-        key: node-modules-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
+        key: yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+            yarn-
 
     - name: Install dependencies 🔧
       shell: bash
       if: steps.cache_dependencies.outputs.cache-hit != 'true'
-      run: npm ci
+      run: yarn install --frozen-lockfile

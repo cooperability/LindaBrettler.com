@@ -8,141 +8,18 @@ const Skills: React.FC = () => {
     <Layout home>
       <section className={styles.headingMd}>
         <p>
-          <b>Front End</b>
+          Click to view (desktop optimized)
         </p>
-        <div className="flex flex-row justify-evenly">
-          <div className="flex">
-            <Link href="https://react.dev/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/react.png"
-                  alt="React"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-            <span>&nbsp; + &nbsp;</span>
-            <Link href="https://nextjs.org/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/nextjs.png"
-                  alt="Next.js"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-          </div>
-          <div className="flex">
-            <Link href="https://tailwindcss.com/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/css.png"
-                  alt="Next.js"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-            <span>&nbsp; + &nbsp;</span>
-            <Link href="https://tailwindcss.com/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/tailwind.png"
-                  alt="Next.js"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-          </div>
-        </div>
+        Projects page
+        <Image
+          priority
+          src="/images/BMX.gif"
+          height={2530}
+          width={1656}
+          alt={"BookMark eXtractor V2"}
+        />
         <div className={styles.horizLine}></div>
-        <p>
-          <b>Back End</b>
-        </p>
-        <div className="flex flex-row justify-evenly">
-          <div className="flex">
-            <Link href="https://www.python.org/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/python.png"
-                  alt="Django"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-            <span>&nbsp; + &nbsp;</span>
-            <Link href="https://www.djangoproject.com/">
-              <div className="hover:cursor-pointer">
-                <Image
-                  src="/images/django.png"
-                  alt="Django"
-                  className={styles.hoverImage}
-                  width="50"
-                  height="50"
-                />
-              </div>
-            </Link>
-          </div>
-          <Link href="https://nodejs.org/en">
-            <div className="hover:cursor-pointer">
-              <Image
-                src="/images/njs.png"
-                alt="Django"
-                className={styles.hoverImage}
-                width="50"
-                height="50"
-              />
-            </div>
-          </Link>
-        </div>
-        <div className={styles.horizLine}></div>
-        <p>
-          <b>Database</b>
-        </p>
-        <div className="flex flex-row justify-evenly">
-          <Link href="https://www.postgresql.org/">
-            <div className="hover:cursor-pointer">
-              <Image
-                src="/images/postgresql.png"
-                alt="Postgres"
-                className={styles.hoverImage}
-                width="50"
-                height="50"
-              />
-            </div>
-          </Link>
-          <Link href="https://www.mongodb.com/">
-            <div className="hover:cursor-pointer">
-              <Image
-                src="/images/mongodb.png"
-                alt="MongoDB"
-                className={styles.hoverImage}
-                width="50"
-                height="50"
-              />
-            </div>
-          </Link>
-          <Link href="https://firebase.google.com/">
-            <div className="hover:cursor-pointer">
-              <Image
-                src="/images/firebase.png"
-                alt="Firebase"
-                className={styles.hoverImage}
-                width="40"
-                height="40"
-              />
-            </div>
-          </Link>
-        </div>
+        <Link href="https://opioid-converter.vercel.app">Opioid Converter (Typescript + CSS + Vercel)</Link>
       </section>
     </Layout>
   );

@@ -51,13 +51,13 @@ const Header = () => {
           <ActiveLink activeClassName="active" href="/">
             <a className={styles.navLink}>| Home |</a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/demos">
+          <ActiveLink activeClassName="active" href="/devlog">
             <a className={styles.navLink}>| Projects |</a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/skills">
+          <ActiveLink activeClassName="active" href="/demos">
             <a className={styles.navLink}>| About |</a>
           </ActiveLink>
-          <ActiveLink activeClassName="active" href="/devlog">
+          <ActiveLink activeClassName="active" href="/skills">
             <a className={styles.navLink}>| Press |</a>
           </ActiveLink>
         </div>
@@ -76,7 +76,7 @@ const Header = () => {
         <nav className={styles.navbar} suppressHydrationWarning>
           {navigator()}
         </nav>
-        <Link href="https://www.imdb.com/name/nm5343773/">
+        <Link href="https://www.instagram.com/lindabrettlerarchitect/?hl=en">
           <div className="hover:cursor-pointer flex:horizontal justify-center items-center">
             <Image
                 src="/images/insta.png"

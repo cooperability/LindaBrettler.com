@@ -10,7 +10,7 @@ const Footer = () => {
           <div className={styles.horizLine} />
           <Image
             priority
-            src="/images/Letterhead.jpg"
+            src="/images/Letterhead.png"
             height={200}
             width={500}
             alt={"Letterhead"}
